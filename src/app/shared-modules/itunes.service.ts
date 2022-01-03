@@ -6,11 +6,11 @@ import { Http } from '@angular/http';
 })
 export class ItunesService {
 
-  constructor(private http: Http) { }
+  constructor(private servicehttp: Http) { }
 
   search(critiria:any) {
 
-    return this.http.get(`https://itunes.apple.com/search?term=${critiria.titleTrack}&limit=${critiria.limit}`);
+    return this.servicehttp.get(`https://itunes.apple.com/search?term=${critiria.titleTrack}&limit=${critiria.limit}`);
 
   }
 }

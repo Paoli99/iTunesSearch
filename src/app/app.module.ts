@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './modules/navbar/navbar.component';
 import { FooterComponent } from './modules/footer/footer.component';
 import { BodyComponent } from './modules/body/body.component';
+import { SearchResultsComponent } from './modules/search-results/search-results.component';
+
 
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule} from '@angular/material/button';
@@ -18,6 +20,7 @@ import { MatListModule } from '@angular/material/list';
 import { ItunesService } from './shared-modules/itunes.service';
 
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -26,6 +29,7 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     FooterComponent,
     BodyComponent,
+    SearchResultsComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,10 +41,11 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatDividerModule,
     MatListModule,
-    FormsModule
+    FormsModule,
+    HttpModule
     
   ],
-  providers: [],
+  providers: [ItunesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

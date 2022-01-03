@@ -1,0 +1,29 @@
+<div class="search">
+
+    <input type="text" [(ngModel)]="titleTrack" name="titleTrack" class="search-box" placeholder="enter a song, album, or artist"> <br>
+    <button class="btn" (click)='onSearch()'>search</button>
+
+</div>
+
+<table class="table" [hidden]="!showList">
+    <thead>
+        <th>Image Cover</th>
+        <th>Track Name</th>
+        <th>Track Artist</th>
+        <th>Track Album</th>
+        <th>Track Time</th>
+        <th (click)="onSort()">Price</th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let song of songs; let i = index">
+            <td><img src={{song.artworkUrl100}}></td>
+
+            <td>{{song.trackName}}</td>
+            <td>{{song.artistName}}</td>
+            <td>{{song.collectionName}}</td>
+            <td>{{song.trackTimeMillis}}</td>
+            <td>{{song.trackPrice}}</td>
+        </tr>
+    </tbody>
+</table>
