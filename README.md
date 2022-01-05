@@ -4,7 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
+Make sure to have downloaded angular materials `npm install --save @angular/material`
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
 
 ## Code scaffolding
 
@@ -25,3 +27,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Base idea 
+Since it this is my second time using angular, I took some ideas from https://stackblitz.com/edit/itunes-music-search for the API integration.
+Apple Music logo was used for navbar and footer. 
+Links at the navbar that  are not funtional: songs, albums and artists.
+To search for a song, click at the search button found in the navbar. Type the song name at the input and click search.  
+
