@@ -3,13 +3,9 @@ body {
     padding: 0 10vw;
 }
 
-input,
-input,
-textarea {
-    display: block;
+input {
     width: 300px;
     height: 40px;
-    padding: 20px;
     border-radius: 5px;
     background: #fff;
     border: none;
@@ -21,38 +17,29 @@ textarea {
     font-family: 'roboto', sans-serif;
 }
 
-.search {
-    width: 500px;
-    display: flex;
-}
-
-.search-box {
-    width: 80%;
-    height: 40px;
-    padding: 10px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border: 1px solid #d1d1d1;
-    background: none;
-    color: #a9a9a9;
-    outline: none;
-}
-
-.search-box::placeholder {
-    color: #a9a9a9;
-}
-
 .btn {
-    width: 20%;
-    height: 40px;
-    padding: 10px 20px;
     border: none;
     outline: none;
-    cursor: pointer;
     background: #383838;
     color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
     text-transform: capitalize;
-    font-size: 15px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+td img {
+    width: 50px;
+}
+
+.table-content {
+    border: 1px solid black;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.empty-image {
+    display: block;
+    margin: 60px auto;
 }

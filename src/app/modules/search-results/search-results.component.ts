@@ -8,12 +8,13 @@ import {ItunesService} from '../../shared-modules/itunes.service';
 })
 export class SearchResultsComponent implements OnInit {
   showList = false;
+  showImage = true;
   titleTrack: string = "";
   limit: number = 10;
   toggle = true;
-  trackTimeMillis : string = "";
+  trackTimeMillis : string = " ";
   artistName: string = "";
-
+  //date : string = "";
   collectionName: string = "";
   criteria:any;
   songs:any;
@@ -23,21 +24,35 @@ export class SearchResultsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSearch() {
+  onSearchClick() {
+    
     this.showList = true;
+    this.showImage = false;
+
+    
     this.criteria = {
       titleTrack: this.titleTrack,
       limit: this.limit,
-      trackTimeMillis : this.trackTimeMillis,
+      trackTimeMillis : (this.trackTimeMillis),
       artistName: this.artistName,
-      collectionName : this.collectionName
+      collectionName : this.collectionName,      
     }
-
-
+        
     this.service.search(this.criteria)
       .subscribe((res) => {
         this.songs = res.json().results;
+
+        if(this.songs.length == 0){
+          this.showImage = true;
+          this.showList = false;
+        }
       });
+  
+      if (this.criteria.titleTrack == ""){
+        this.showImage = true;
+        this.showList = false;
+      }
+
   }
 
   onSort() {
